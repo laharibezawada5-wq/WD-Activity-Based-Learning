@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Foodie Express</title>
+</head>
+
+<body>
+<link rel="stylesheet" href="webactivity2.css">
+    <header id="home">
+        <h1>🍽️ Foodie Express</h1>
+        <p>Delicious Food Delivered With Love!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#offers">Offers</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Good Food, Happy Mood! 💗</h2>
+        <p>Enjoy your favourite meals at affordable prices.</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+
+    <section id="menu">
+        <h2>🍴 Our Delicious Menu</h2>
+
+        <div class="menu-container">
+
+            <div class="food-card">
+                <div class="food-image">🍕</div>
+                <h3>Margherita Pizza</h3>
+                <p>Cheesy pizza with fresh toppings.</p>
+                <div class="price">₹199</div>
+                <button class="btn" onclick="order('Margherita Pizza', 199)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🍔</div>
+                <h3>Veg Burger</h3>
+                <p>Crispy patty with fresh vegetables.</p>
+                <div class="price">₹129</div>
+                <button class="btn" onclick="order('Veg Burger', 129)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🍝</div>
+                <h3>White Sauce Pasta</h3>
+                <p>Creamy pasta with delicious herbs.</p>
+                <div class="price">₹179</div>
+                <button class="btn" onclick="order('White Sauce Pasta', 179)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🥗</div>
+                <h3>Garden Salad</h3>
+                <p>Fresh and healthy vegetable salad.</p>
+                <div class="price">₹99</div>
+                <button class="btn" onclick="order('Garden Salad', 99)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🍰</div>
+                <h3>Chocolate Cake</h3>
+                <p>Soft chocolate cake for sweet lovers.</p>
+                <div class="price">₹89</div>
+                <button class="btn" onclick="order('Chocolate Cake', 89)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🥤</div>
+                <h3>Fresh Lime Drink</h3>
+                <p>Refreshing drink for a sunny day.</p>
+                <div class="price">₹49</div>
+                <button class="btn" onclick="order('Fresh Lime Drink', 49)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🍛</div>
+                <h3>Chicken Biryani</h3>
+                <p>Flavourful biryani with aromatic spices.</p>
+                <div class="price">₹249</div>
+                <button class="btn" onclick="order('Chicken Biryani', 249)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🥞</div>
+                <h3>Masala Dosa</h3>
+                <p>Crispy dosa served with chutney.</p>
+                <div class="price">₹99</div>
+                <button class="btn" onclick="order('Masala Dosa', 99)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🍜</div>
+                <h3>Veg Noodles</h3>
+                <p>Tasty noodles tossed with vegetables.</p>
+                <div class="price">₹139</div>
+                <button class="btn" onclick="order('Veg Noodles', 139)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🍟</div>
+                <h3>French Fries</h3>
+                <p>Golden and crispy potato fries.</p>
+                <div class="price">₹79</div>
+                <button class="btn" onclick="order('French Fries', 79)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🥪</div>
+                <h3>Veg Sandwich</h3>
+                <p>Fresh sandwich filled with vegetables.</p>
+                <div class="price">₹89</div>
+                <button class="btn" onclick="order('Veg Sandwich', 89)">Order Now</button>
+            </div>
+
+            <div class="food-card">
+                <div class="food-image">🍨</div>
+                <h3>Vanilla Ice Cream</h3>
+                <p>Cool and creamy vanilla ice cream.</p>
+                <div class="price">₹69</div>
+                <button class="btn" onclick="order('Vanilla Ice Cream', 69)">Order Now</button>
+            </div>
+
+        </div>
+
+        <p id="message" aria-live="polite"></p>
+    </section>
+
+    <section id="offers" class="offer">
+        <h2>🎉 Special Offers</h2>
+        <p>Get 20% OFF on your first order!</p>
+        <p>Free delivery on orders above ₹499.</p>
+        <a href="#menu" class="btn">Order Your Favourite Food</a>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <h2>⭐ Customer Reviews</h2>
+
+        <div class="review-container">
+            <div class="review-card">
+                <h3>Priya</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Amazing food and great taste. I loved the pizza!"</p>
+            </div>
+
+            <div class="review-card">
+                <h3>Rahul</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Good prices and a wonderful variety of food."</p>
+            </div>
+
+            <div class="review-card">
+                <h3>Sneha</h3>
+                <div class="stars">★★★★☆</div>
+                <p>"The biryani was delicious. I will order again!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>📞 Contact Us</h2>
+        <p>Email: foodiexpress@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: Vijayawada, Andhra Pradesh</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Foodie Express | Made with 💗 for food lovers</p>
+    </footer>
+
+    <script>
+        function order(item, price) {
+            document.getElementById("message").textContent =
+                "You selected " + item + " for ₹" + price +
+                ". This is a demo; no real order has been placed.";
+        }
+    </script>
+
+</body>
+</html>

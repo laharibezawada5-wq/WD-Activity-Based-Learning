@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<head>
+    <title>ShopEase - Online Shopping</title>
+
+    <link rel="stylesheet" href="webactivity.css">
+</head>
+
+<body>
+<link rel="stylesheet" href="webactivity.css">
+    <!-- Header -->
+    <header>
+        <h1>🛍️ ShopEase</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#offers">Offers</a>
+            <a href="#contact">Contact</a>
+            <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <div class="hero" id="home">
+        <h2>Big Deals, Better Choices!</h2>
+        <p>Discover popular products at great prices.</p>
+        <a class="btn" href="#products">Shop Now</a>
+    </div>
+
+    <!-- Offers Section -->
+    <section id="offers">
+        <h2>🎉 Special Offers</h2>
+        <p>✨ Festival Sale — save up to 30% on selected products!</p>
+        <p>Find great deals on electronics, fashion, and home products.</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>🛒 Featured Products</h2>
+
+        <div class="filters">
+            <button class="active" onclick="filterProducts('All', this)">All</button>
+            <button onclick="filterProducts('Electronics', this)">Electronics</button>
+            <button onclick="filterProducts('Fashion', this)">Fashion</button>
+            <button onclick="filterProducts('Home', this)">Home</button>
+        </div>
+
+        <div class="products">
+
+            <!-- Product 1 -->
+            <article class="card" data-category="Electronics" data-name="Wireless Headphones" data-price="1499">
+                <div class="product-icon">🎧</div>
+                <div class="details">
+                    <h3>Wireless Headphones</h3>
+                    <p class="rating">★★★★★ (4.5)</p>
+                    <p>Comfortable headphones for music and calls.</p>
+                    <p class="price">₹1,499 <span class="old">₹1,999</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="card" data-category="Electronics" data-name="Smart Watch" data-price="2199">
+                <div class="product-icon">⌚</div>
+                <div class="details">
+                    <h3>Smart Watch</h3>
+                    <p class="rating">★★★★☆ (4.2)</p>
+                    <p>A smart accessory for everyday activities.</p>
+                    <p class="price">₹2,199 <span class="old">₹2,799</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="card" data-category="Fashion" data-name="Casual Sneakers" data-price="999">
+                <div class="product-icon">👟</div>
+                <div class="details">
+                    <h3>Casual Sneakers</h3>
+                    <p class="rating">★★★★☆ (4.1)</p>
+                    <p>Everyday shoes with a simple design.</p>
+                    <p class="price">₹999 <span class="old">₹1,299</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="card" data-category="Home" data-name="Ceramic Mug Set" data-price="399">
+                <div class="product-icon">☕</div>
+                <div class="details">
+                    <h3>Ceramic Mug Set</h3>
+                    <p class="rating">★★★★★ (4.6)</p>
+                    <p>A useful mug set for your home or office.</p>
+                    <p class="price">₹399 <span class="old">₹549</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="card" data-category="Electronics" data-name="Smartphone" data-price="12999">
+                <div class="product-icon">📱</div>
+                <div class="details">
+                    <h3>Smartphone</h3>
+                    <p class="rating">★★★★★ (4.5)</p>
+                    <p>A stylish smartphone for everyday use.</p>
+                    <p class="price">₹12,999 <span class="old">₹14,999</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="card" data-category="Electronics" data-name="Laptop" data-price="39999">
+                <div class="product-icon">💻</div>
+                <div class="details">
+                    <h3>Laptop</h3>
+                    <p class="rating">★★★★☆ (4.3)</p>
+                    <p>A laptop for study and work.</p>
+                    <p class="price">₹39,999 <span class="old">₹44,999</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 7 -->
+            <article class="card" data-category="Electronics" data-name="Bluetooth Speaker" data-price="1299">
+                <div class="product-icon">🔊</div>
+                <div class="details">
+                    <h3>Bluetooth Speaker</h3>
+                    <p class="rating">★★★★☆ (4.2)</p>
+                    <p>Enjoy music with clear sound.</p>
+                    <p class="price">₹1,299 <span class="old">₹1,699</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 8 -->
+            <article class="card" data-category="Fashion" data-name="Cotton T-Shirt" data-price="499">
+                <div class="product-icon">👕</div>
+                <div class="details">
+                    <h3>Cotton T-Shirt</h3>
+                    <p class="rating">★★★★★ (4.4)</p>
+                    <p>Comfortable cotton wear for daily use.</p>
+                    <p class="price">₹499 <span class="old">₹699</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 9 -->
+            <article class="card" data-category="Fashion" data-name="Travel Backpack" data-price="899">
+                <div class="product-icon">🎒</div>
+                <div class="details">
+                    <h3>Travel Backpack</h3>
+                    <p class="rating">★★★★☆ (4.3)</p>
+                    <p>A spacious bag for college and travel.</p>
+                    <p class="price">₹899 <span class="old">₹1,199</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 10 -->
+            <article class="card" data-category="Fashion" data-name="Classic Wrist Watch" data-price="799">
+                <div class="product-icon">⌚</div>
+                <div class="details">
+                    <h3>Classic Wrist Watch</h3>
+                    <p class="rating">★★★★☆ (4.1)</p>
+                    <p>A simple watch for everyday style.</p>
+                    <p class="price">₹799 <span class="old">₹999</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 11 -->
+            <article class="card" data-category="Home" data-name="LED Table Lamp" data-price="599">
+                <div class="product-icon">💡</div>
+                <div class="details">
+                    <h3>LED Table Lamp</h3>
+                    <p class="rating">★★★★★ (4.5)</p>
+                    <p>A useful lamp for reading and studying.</p>
+                    <p class="price">₹599 <span class="old">₹799</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 12 -->
+            <article class="card" data-category="Home" data-name="Bed Sheet Set" data-price="999">
+                <div class="product-icon">🛏️</div>
+                <div class="details">
+                    <h3>Bed Sheet Set</h3>
+                    <p class="rating">★★★★☆ (4.2)</p>
+                    <p>A soft and comfortable bedding set.</p>
+                    <p class="price">₹999 <span class="old">₹1,299</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 13 -->
+            <article class="card" data-category="Electronics" data-name="Tablet" data-price="15999">
+                <div class="product-icon">📲</div>
+                <div class="details">
+                    <h3>Tablet</h3>
+                    <p class="rating">★★★★★ (4.5)</p>
+                    <p>A lightweight tablet for learning and entertainment.</p>
+                    <p class="price">₹15,999 <span class="old">₹18,999</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 14 -->
+            <article class="card" data-category="Fashion" data-name="Sunglasses" data-price="599">
+                <div class="product-icon">🕶️</div>
+                <div class="details">
+                    <h3>Sunglasses</h3>
+                    <p class="rating">★★★★☆ (4.3)</p>
+                    <p>Stylish sunglasses for everyday outdoor use.</p>
+                    <p class="price">₹599 <span class="old">₹899</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product 15 -->
+            <article class="card" data-category="Home" data-name="Flower Vase" data-price="499">
+                <div class="product-icon">🏺</div>
+                <div class="details">
+                    <h3>Flower Vase</h3>
+                    <p class="rating">★★★★★ (4.4)</p>
+                    <p>A beautiful decorative vase for your home.</p>
+                    <p class="price">₹499 <span class="old">₹699</span></p>
+                    <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Shopping Cart -->
+        <div id="cart">
+            <h3>🛍️ Your Shopping Cart</h3>
+            <p id="cart-message">Your cart is empty.</p>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: ₹0</p>
+            <button class="btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>📞 Contact Us</h2>
+        <p>Email: support@shopease.example</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 ShopEase | Sample Online Shopping Website</p>
+    </footer>
+
+    <script>
+        let cart = [];
+
+        // Add product to cart
+        function addToCart(button) {
+            const card = button.closest(".card");
+            const name = card.dataset.name;
+            const price = Number(card.dataset.price);
+
+            cart.push({ name: name, price: price });
+            updateCart();
+        }
+
+        // Update cart display
+        function updateCart() {
+            document.getElementById("cart-count").textContent = cart.length;
+
+            const cartItems = document.getElementById("cart-items");
+            const cartMessage = document.getElementById("cart-message");
+            const cartTotal = document.getElementById("cart-total");
+
+            cartItems.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartMessage.textContent = "Your cart is empty.";
+            } else {
+                cartMessage.textContent =
+                    "You have " + cart.length + " item(s) in your cart.";
+
+                cart.forEach(function(item, index) {
+                    const li = document.createElement("li");
+                    const name = document.createElement("span");
+                    const removeButton = document.createElement("button");
+
+                    name.textContent =
+                        item.name + " - ₹" +
+                        item.price.toLocaleString("en-IN");
+
+                    removeButton.textContent = "Remove";
+                    removeButton.className = "remove-btn";
+
+                    removeButton.onclick = function() {
+                        removeFromCart(index);
+                    };
+
+                    li.appendChild(name);
+                    li.appendChild(removeButton);
+                    cartItems.appendChild(li);
+                });
+            }
+
+            const total = cart.reduce(function(sum, item) {
+                return sum + item.price;
+            }, 0);
+
+            cartTotal.textContent =
+                "Total: ₹" + total.toLocaleString("en-IN");
+        }
+
+        // Remove one item
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        // Clear all cart items
+        function clearCart() {
+            cart = [];
+            updateCart();
+        }
+
+        // Filter products by category
+        function filterProducts(category, button) {
+            document.querySelectorAll(".card").forEach(function(card) {
+                if (category === "All" ||
+                    card.dataset.category === category) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            document.querySelectorAll(".filters button").forEach(function(btn) {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>

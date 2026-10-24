@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ExploreMore Travel Agency</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="webactivity3.css">
+
+<!-- Header -->
+<header>
+    <h1>🌍 ExploreMore</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#packages">Packages</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#inquiry">Travel Inquiry</a>
+    </nav>
+</header>
+
+<!-- Home Section -->
+<div class="hero" id="home">
+    <h2>Your Next Adventure Starts Here</h2>
+    <p>Discover memorable destinations, scenic journeys, and holiday packages for every kind of traveller.</p>
+    <a class="btn" href="#packages">Explore Packages</a>
+</div>
+
+<!-- Holiday Packages -->
+<section id="packages">
+    <h2>Popular Holiday Packages</h2>
+
+    <div class="packages">
+
+        <!-- 1. Manali -->
+        <article class="card">
+            <div class="destination">🏔️</div>
+            <div class="details">
+                <h3>Manali Mountain Escape</h3>
+                <p>Enjoy mountain views, local markets, and nature walks.</p>
+                <ul>
+                    <li>Duration: 4 days / 3 nights</li>
+                    <li>Includes: Stay and local sightseeing</li>
+                    <li>Best for: Nature lovers</li>
+                </ul>
+                <p class="price">From ₹8,999</p>
+                <button class="btn" onclick="selectPackage('Manali Mountain Escape')">Enquire Now</button>
+            </div>
+        </article>
+
+        <!-- 2. Goa -->
+        <article class="card">
+            <div class="destination">🏖️</div>
+            <div class="details">
+                <h3>Goa Beach Holiday</h3>
+                <p>Explore beaches, heritage sites, and coastal cuisine.</p>
+                <ul>
+                    <li>Duration: 3 days / 2 nights</li>
+                    <li>Includes: Stay and sightseeing</li>
+                    <li>Best for: Friends and families</li>
+                </ul>
+                <p class="price">From ₹6,499</p>
+                <button class="btn" onclick="selectPackage('Goa Beach Holiday')">Enquire Now</button>
+            </div>
+        </article>
+
+        <!-- 3. Jaipur -->
+        <article class="card">
+            <div class="destination">🏰</div>
+            <div class="details">
+                <h3>Jaipur Heritage Tour</h3>
+                <p>Discover forts, palaces, crafts, and local culture.</p>
+                <ul>
+                    <li>Duration: 3 days / 2 nights</li>
+                    <li>Includes: Stay and guided tour</li>
+                    <li>Best for: Culture enthusiasts</li>
+                </ul>
+                <p class="price">From ₹5,999</p>
+                <button class="btn" onclick="selectPackage('Jaipur Heritage Tour')">Enquire Now</button>
+            </div>
+        </article>
+
+        <!-- 4. Kerala - New -->
+        <article class="card">
+            <div class="destination">🌴</div>
+            <div class="details">
+                <h3>Kerala Backwater Escape</h3>
+                <p>Experience peaceful backwaters, green landscapes, and delicious Kerala cuisine.</p>
+                <ul>
+                    <li>Duration: 4 days / 3 nights</li>
+                    <li>Includes: Stay and local sightseeing</li>
+                    <li>Best for: Couples and families</li>
+                </ul>
+                <p class="price">From ₹9,499</p>
+                <button class="btn" onclick="selectPackage('Kerala Backwater Escape')">Enquire Now</button>
+            </div>
+        </article>
+
+        <!-- 5. Agra - New -->
+        <article class="card">
+            <div class="destination">🕌</div>
+            <div class="details">
+                <h3>Agra Taj Mahal Tour</h3>
+                <p>Visit the iconic Taj Mahal, explore historic monuments, and enjoy local food.</p>
+                <ul>
+                    <li>Duration: 2 days / 1 night</li>
+                    <li>Includes: Stay and guided sightseeing</li>
+                    <li>Best for: History lovers</li>
+                </ul>
+                <p class="price">From ₹4,499</p>
+                <button class="btn" onclick="selectPackage('Agra Taj Mahal Tour')">Enquire Now</button>
+            </div>
+        </article>
+
+        <!-- 6. Ooty - New -->
+        <article class="card">
+            <div class="destination">🌄</div>
+            <div class="details">
+                <h3>Ooty Hill Station Retreat</h3>
+                <p>Enjoy cool weather, beautiful tea gardens, and scenic mountain views.</p>
+                <ul>
+                    <li>Duration: 3 days / 2 nights</li>
+                    <li>Includes: Stay and sightseeing</li>
+                    <li>Best for: Nature lovers and families</li>
+                </ul>
+                <p class="price">From ₹5,499</p>
+                <button class="btn" onclick="selectPackage('Ooty Hill Station Retreat')">Enquire Now</button>
+            </div>
+        </article>
+
+    </div>
+
+    <p class="notice">
+        Note: All package prices are sample prices for this student project and are not live travel offers.
+    </p>
+</section>
+
+<!-- Why Choose Us -->
+<section id="why-us">
+    <h2>Why Travel With Us?</h2>
+
+    <div class="packages">
+        <div class="card">
+            <div class="details">
+                <h3>🧭 Planned Itineraries</h3>
+                <p>Easy-to-follow schedules for your journey.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="details">
+                <h3>💬 Friendly Support</h3>
+                <p>Help with planning and travel questions.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="details">
+                <h3>🌄 Memorable Destinations</h3>
+                <p>Options for mountains, beaches, backwaters, and heritage.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Travel Inquiry Form -->
+<section id="inquiry">
+    <h2>Travel Inquiry Form</h2>
+
+    <form onsubmit="submitInquiry(event)">
+
+        <div>
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text"
+                   required placeholder="Enter your name">
+        </div>
+
+        <div>
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email"
+                   required placeholder="name@example.com">
+        </div>
+
+        <div>
+            <label for="destination-select">Destination</label>
+            <select id="destination-select" name="destination" required>
+                <option value="">Choose destination</option>
+                <option>Manali Mountain Escape</option>
+                <option>Goa Beach Holiday</option>
+                <option>Jaipur Heritage Tour</option>
+                <option>Kerala Backwater Escape</option>
+                <option>Agra Taj Mahal Tour</option>
+                <option>Ooty Hill Station Retreat</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="date">Preferred Travel Date</label>
+            <input id="date" name="date" type="date" required>
+        </div>
+
+        <div>
+            <label for="people">Number of Travellers</label>
+            <input id="people" name="people" type="number"
+                   min="1" max="30" value="2" required>
+        </div>
+
+        <div>
+            <label for="phone">Phone Number</label>
+            <input id="phone" name="phone" type="tel"
+                   placeholder="Enter phone number"
+                   pattern="[0-9]{10}"
+                   title="Enter a 10-digit phone number">
+        </div>
+
+        <div class="form-wide">
+            <label for="notes">Additional Requests</label>
+            <textarea id="notes" name="notes"
+                      placeholder="Tell us about your travel preferences"></textarea>
+        </div>
+
+        <div class="form-wide">
+            <button class="btn" type="submit">Submit Inquiry</button>
+        </div>
+
+    </form>
+
+    <p id="form-message" class="notice">
+        Complete the form to preview your inquiry confirmation.
+    </p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 ExploreMore Travel Agency | Sample Travel Website</p>
+    <p>Email: travel@exploremore.example | Phone: +91-XXXXXXXXXX</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+function selectPackage(name) {
+    document.getElementById("destination-select").value = name;
+
+    document.getElementById("inquiry").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function submitInquiry(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const destination = document.getElementById("destination-select").value;
+    const date = document.getElementById("date").value;
+    const people = document.getElementById("people").value;
+
+    document.getElementById("form-message").textContent =
+        "Thank you, " + name +
+        "! Your inquiry for " + destination +
+        " on " + date +
+        " for " + people +
+        " traveller(s) has been prepared. This demo does not send data to a server.";
+}
+</script>
+
+</body>
+</html>
+```
